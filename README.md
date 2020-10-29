@@ -1,4 +1,4 @@
-## WebGL Wind — [Demo](https://goldford.github.io/webgl-wind/tree/master/demo)
+## WebGL Wind — [Demo](https://goldford.github.io/webgl-wind/demo)
 
 A WebGL-powered visualization of wind power.
 Capable of rendering up to 1 million wind particles at 60fps.

@@ -80,16 +80,21 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
 
     for (let i = 0; i < data.features.length; i++) {
         const line = data.features[i].geometry.coordinates;
+		
         for (let j = 0; j < line.length; j++) {
-			console.log((line[j][0] + minlon) * canvas.width / degspan_width)
-			console.log((-line[j][1] + minlat) * canvas.height / degspan_height)
+			const x_pos = (line[j][0] + minlon) * canvas.width / degspan_width
+			const y_pos = (-line[j][1] + minlat) * canvas.height / degspan_height
+			const test1 = isNaN(parseFloat(x_pos))
+			const test2 = isNaN(parseFloat(y_pos))
+			console.log(x_pos)
+			console.log(test1)
+			console.log(y_pos)
+			console.log(test2)
             ctx[j ? 'lineTo' : 'moveTo'](
-                //(line[j][0] + 180) * canvas.width / 360,
-                //(line[j][0] + (degspan_width/2)) * canvas.width / degspan_width,	
-				(line[j][0] + minlon) * canvas.width / degspan_width,				
-                //(-line[j][1] + 90) * canvas.height / 180);				
-                //(-line[j][1] + (degspan_height/2)) * canvas.height / degspan_height);
-				(-line[j][1] + minlat) * canvas.height / degspan_height);
+                //(line[j][0] + 180) * canvas.width / 360,		
+                //(-line[j][1] + 90) * canvas.height / 180);
+				x_pos,y_pos
+				);
         }
     }
     ctx.stroke();

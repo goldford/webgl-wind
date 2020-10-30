@@ -1,8 +1,8 @@
 {
   "source": "http://nomads.ncep.noaa.gov",
   "date": "1980-01-05T00:00Z",
-  "width": 6.6,
-  "height": 4.85,
+  "width": 19,
+  "height": 25,
   "uMin": -2,
   "uMax": 2,
   "vMin": -2,

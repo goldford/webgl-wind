@@ -25,7 +25,7 @@ The current version is build to run and test on github pages. See the original f
 
 ### Downloading and processing wind data, and running the demo
 
-The ERA5 model is a (retrospective reanalysis)[(https://climate.copernicus.eu/climate-reanalysis)] of past weather conditions produced by the European Centre for Medium-Range Weather Forecasts. The original project uses [ecCodes](https://confluence.ecmwf.int//display/ECC/ecCodes+Home) (e.g. `brew install eccodes`) but due to issues installing on Windows, I instead reprogrammed the processing of copernicus NetCDF files in Python (see notebook). 
+The ERA5 model is a [retrospective reanalysis](https://climate.copernicus.eu/climate-reanalysis) of past weather conditions produced by the European Centre for Medium-Range Weather Forecasts. The original project uses [ecCodes](https://confluence.ecmwf.int//display/ECC/ecCodes+Home) (e.g. `brew install eccodes`) but due to issues installing on Windows, I instead reprogrammed the processing of copernicus NetCDF files in Python (see notebook). 
 
 1. Download [copernicus model files](https://www.ecmwf.int/en/forecasts/datasets/browse-reanalysis-datasets) as NetCDF and place it in the 'data' folder.
 2. Run the Python script provided in the Jupyter noteboook to produce a PNG file. 

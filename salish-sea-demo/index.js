@@ -41,8 +41,8 @@ const windFiles = {
     //36: '2016112112',
     //42: '2016112118',
     //48: '2016112200'
-	0: '1980-05',
-    6: '2000-05'
+	198005: '1980-05',
+    200005: '2000-05'
 };
 
 const meta = {
@@ -52,7 +52,9 @@ const meta = {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
-gui.add(meta, '1980-05', 0, 6, 6).onFinishChange(updateWind);
+gui.add(meta, 'Year-Month', 198005, 200005, 200000).onFinishChange(updateWind);
+//gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
+
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }

@@ -69,10 +69,11 @@ function updateRetina() {
 //getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_coastline.geojson', function (data) {
 getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (data) {
     const canvas = document.getElementById('coastline');
-    canvas.width = canvas.clientWidth * pxRatio;
+    
+	canvas.width = canvas.clientWidth * pxRatio;
     canvas.height = canvas.clientHeight * pxRatio;
-	console.log(canvas.width);
-	console.log(canvas.height);
+	//console.log(canvas.width);
+	//console.log(canvas.height);
 
     const ctx = canvas.getContext('2d');
     ctx.lineWidth = pxRatio;
@@ -83,8 +84,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
     for (let i = 0; i < data.features.length; i++) {
         	
 		const linetype = data.features[i].geometry.type;
-		console.log(linetype);
-		//console.log(line.length);
+		//console.log(linetype);
 		
 		// if linetype is MultiLineString then need to have a second nested loop -go
 		if (linetype == "LineString"){
@@ -142,7 +142,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 						//console.log(y_pos);
 						continue;
 					}else{
-						ctx[j ? 'lineTo' : 'moveTo'](
+						ctx[k ? 'lineTo' : 'moveTo'](
 						//(line[j][0] + 180) * canvas.width / 360,		
 						//(-line[j][1] + 90) * canvas.height / 180);
 						x_pos,y_pos);

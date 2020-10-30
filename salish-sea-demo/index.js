@@ -55,7 +55,7 @@ gui.add(meta, '1980-01-01+h', 0, 48, 6).onFinishChange(updateWind);
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }
-gui.add(meta, 'github.com/mapbox/webgl-wind');
+gui.add(meta, 'github.com/goldford/webgl-wind');
 updateWind(0);
 updateRetina();
 

@@ -10,7 +10,7 @@ const gl = canvas.getContext('webgl', {antialiasing: false});
 // go - replacing hardcoded stuff lines 83/84
 const degspan_height = 5
 const degspan_width = 9
-const minlon = -130
+const minlon = 130 //change neg to pos
 const minlat = 45
 
 const wind = window.wind = new WindGL(gl);
@@ -84,7 +84,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
             ctx[j ? 'lineTo' : 'moveTo'](
                 //(line[j][0] + 180) * canvas.width / 360,
                 //(line[j][0] + (degspan_width/2)) * canvas.width / degspan_width,	
-				line[j][0] + (minlat*-1)) * canvas.width / degspan_width,				
+				(line[j][0] + minlat) * canvas.width / degspan_width,				
                 //(-line[j][1] + 90) * canvas.height / 180);				
                 //(-line[j][1] + (degspan_height/2)) * canvas.height / degspan_height);
 				(-line[j][1] + minlat) * canvas.height / degspan_height);

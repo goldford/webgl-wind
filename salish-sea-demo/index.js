@@ -61,7 +61,7 @@ function updateRetina() {
 }
 
 //getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_coastline.geojson', function (data) {
-getJSON('https://goldford.github.io/webgl-wind/salish-sea-demo/data/sscoast.json', function (data) {
+getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (data) {
     const canvas = document.getElementById('coastline');
     canvas.width = canvas.clientWidth * pxRatio;
     canvas.height = canvas.clientHeight * pxRatio;

@@ -1,4 +1,6 @@
-## WebGL Wind Patterns in the Strait of Georgia and Salish Sea — [Demo](https://goldford.github.io/webgl-wind/demo)
+## WebGL Wind Patterns in the Strait of Georgia and Salish Sea — 
+[World Demo](https://goldford.github.io/webgl-wind/demo)
+[Salish Sea Demo](https://goldford.github.io/webgl-wind/salish-sea-demo)
 
 A WebGL-powered visualization of wind power.
 Capable of rendering up to 1 million wind particles at 60fps.

@@ -71,6 +71,8 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
     const canvas = document.getElementById('coastline');
     canvas.width = canvas.clientWidth * pxRatio;
     canvas.height = canvas.clientHeight * pxRatio;
+	console.log(canvas.width);
+	console.log(canvas.height);
 
     const ctx = canvas.getContext('2d');
     ctx.lineWidth = pxRatio;

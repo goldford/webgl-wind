@@ -90,6 +90,8 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 			const test2 = isNaN(parseFloat(y_pos));
 			
 			if (test1 == true || test2 == true) {
+				console.log(line[j][0]);
+				console.log(line[j][1]);
 				continue;
 			}else if(x_pos < 0 || y_pos < 0){
 				console.log(line[j][0]);

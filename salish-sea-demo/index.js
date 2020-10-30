@@ -10,7 +10,7 @@ const gl = canvas.getContext('webgl', {antialiasing: false});
 // go - replacing hardcoded stuff lines 83/84
 const degspan_height = 6;
 const degspan_width = 9;
-const minlon = 127.15; //neg to pos
+const minlon = 128; //neg to pos
 const maxlat = 52.15;
 
 const wind = window.wind = new WindGL(gl);
@@ -92,10 +92,14 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 			if (test1 == true || test2 == true) {
 				console.log(line[j][0]);
 				console.log(line[j][1]);
+				console.log(x_pos);
+				console.log(y_pos);
 				continue;
 			}else if(x_pos < 0 || y_pos < 0){
 				console.log(line[j][0]);
 				console.log(line[j][1]);
+				console.log(x_pos);
+				console.log(y_pos);
 				continue;
 				
 			}

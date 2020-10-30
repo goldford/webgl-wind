@@ -47,7 +47,7 @@ const windFiles = {
 const meta = {
     '1980-01-01+h': 0,
     'retina resolution': true,
-    'github.com/mapbox/webgl-wind': function () {
+    'github.com/goldford/webgl-wind': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };

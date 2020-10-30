@@ -8,7 +8,7 @@ canvas.height = canvas.clientHeight;
 const gl = canvas.getContext('webgl', {antialiasing: false});
 
 // go - replacing hardcoded stuff lines 83/84
-const degspan_height = 9;
+const degspan_height = 5;
 const degspan_width = 9;
 const maxlon = 129; //
 const maxlat = 51;

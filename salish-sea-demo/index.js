@@ -39,13 +39,13 @@ const windFiles = {
 };
 
 const meta = {
-    '2016-11-20+h': 0,
+    '1980-01-01+h': 0,
     'retina resolution': true,
     'github.com/mapbox/webgl-wind': function () {
         window.location = 'https://github.com/mapbox/webgl-wind';
     }
 };
-gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
+gui.add(meta, '1980-01-01+h', 0, 48, 6).onFinishChange(updateWind);
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }
@@ -60,6 +60,7 @@ function updateRetina() {
     wind.resize();
 }
 
+//getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_coastline.geojson', function (data) {
 getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_coastline.geojson', function (data) {
     const canvas = document.getElementById('coastline');
     canvas.width = canvas.clientWidth * pxRatio;

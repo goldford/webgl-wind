@@ -3,7 +3,7 @@
 A WebGL-powered visualization of wind power.
 Capable of rendering up to 1 million wind particles at 60fps.
 
-This project is forked from the work of 
+This project is forked from the work of:
 - [Vladimir Agafonkin](https://blog.mapbox.com/how-i-built-a-wind-map-with-webgl-b63022b5537f)
 
 which in turn was heavily inspired by the work of:

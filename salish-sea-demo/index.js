@@ -46,13 +46,13 @@ const windFiles = {
 };
 
 const meta = {
-    '1980-01-01+h': 0,
+    '1980-05': 0,
     'retina resolution': true,
     'github.com/goldford/webgl-wind': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
-gui.add(meta, '1980-01-01+h', 0, 48, 6).onFinishChange(updateWind);
+gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }

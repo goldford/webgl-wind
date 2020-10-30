@@ -79,7 +79,8 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
     ctx.beginPath();
 
     for (let i = 0; i < data.features.length; i++) {
-        const line = data.features[i].geometry.coordinates;
+        
+		const line = data.features[i].geometry.coordinates;
 		
         for (let j = 0; j < line.length; j++) {
 			
@@ -89,6 +90,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
 			const test2 = isNaN(parseFloat(y_pos));
 			//console.log(x_pos);
 			//console.log(test1);
+			console.log(line[j][1]);
 			console.log(y_pos);
 			//console.log(test2);
 			

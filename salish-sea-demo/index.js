@@ -11,7 +11,7 @@ const gl = canvas.getContext('webgl', {antialiasing: false});
 const degspan_height = 9;
 const degspan_width = 9;
 const minlon = 130; //change neg to pos
-const minlat = 45;
+const minlat = 51;
 
 const wind = window.wind = new WindGL(gl);
 wind.numParticles = 65536;
@@ -85,7 +85,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
         for (let j = 0; j < line.length; j++) {
 			
 			const x_pos = (line[j][0] + minlon) * canvas.width / degspan_width;
-			const y_pos = (-line[j][1] + minlat) * canvas.height / degspan_height;
+			const y_pos = (-line[j][1] + maxlat) * canvas.height / degspan_height;
 			const test1 = isNaN(parseFloat(x_pos));
 			const test2 = isNaN(parseFloat(y_pos));
 			//console.log(x_pos);

@@ -52,7 +52,7 @@ const meta = {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
-gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
+gui.add(meta, '1980-05', 0, 6, 6).onFinishChange(updateWind);
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }

@@ -14,7 +14,7 @@ const minlon = 127.14; //neg to pos
 const maxlat = 52.15;
 
 const wind = window.wind = new WindGL(gl);
-wind.numParticles = 6553;
+wind.numParticles = 20000;
 
 function frame() {
     if (wind.windData) {

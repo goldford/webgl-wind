@@ -123,7 +123,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 			
 			for (let j = 0; j < multilines.length; j++) {
 				
-				for (let k = 0; k < multilines[j].length) {
+				for (let k = 0; k < multilines[j].length; k++) {
 					
 					const x_pos = (multilines[j][k][0] + minlon) * canvas.width / degspan_width;
 					const y_pos = (-multilines[j][k][1] + maxlat) * canvas.height / degspan_height;

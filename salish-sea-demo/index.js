@@ -9,7 +9,7 @@ const gl = canvas.getContext('webgl', {antialiasing: false});
 
 // go - replacing hardcoded stuff lines 83/84
 const degspan_height = 5;
-const degspan_width = 7;
+const degspan_width = 6.273;
 const minlon = 127.14; //neg to pos
 const maxlat = 52.15;
 

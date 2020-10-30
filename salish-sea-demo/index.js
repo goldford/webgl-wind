@@ -11,7 +11,7 @@ const gl = canvas.getContext('webgl', {antialiasing: false});
 const degspan_height = 9;
 const degspan_width = 9;
 const minlon = 130; //change neg to pos
-const minlat = 51;
+const maxlat = 51;
 
 const wind = window.wind = new WindGL(gl);
 wind.numParticles = 65536;

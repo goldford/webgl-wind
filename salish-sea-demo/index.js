@@ -8,10 +8,10 @@ canvas.height = canvas.clientHeight;
 const gl = canvas.getContext('webgl', {antialiasing: false});
 
 // go - replacing hardcoded stuff lines 83/84
-const degspan_height = 5;
+const degspan_height = 7;
 const degspan_width = 9;
-const minlon = 129; //neg to pos
-const maxlat = 51.4;
+const minlon = 128; //neg to pos
+const maxlat = 53;
 
 const wind = window.wind = new WindGL(gl);
 wind.numParticles = 65536;
@@ -67,7 +67,7 @@ function updateRetina() {
 }
 
 //getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_coastline.geojson', function (data) {
-getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (data) {
+getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (data) {
     const canvas = document.getElementById('coastline');
     canvas.width = canvas.clientWidth * pxRatio;
     canvas.height = canvas.clientHeight * pxRatio;

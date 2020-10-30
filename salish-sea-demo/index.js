@@ -85,6 +85,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 		const line = data.features[i].geometry.coordinates;
 		const linetype = data.features[i].geometry.type;
 		console.log(linetype);
+		console.log(line.length);
 		
         for (let j = 0; j < line.length; j++) {
 			

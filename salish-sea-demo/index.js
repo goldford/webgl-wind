@@ -46,14 +46,14 @@ const windFiles = {
 };
 
 const meta = {
-    '1980-05': 0,
+    'Year': 0,
 	//'2016-11-20+h': 0,
     'retina resolution': true,
     'github.com/goldford/webgl-wind': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
-gui.add(meta, '1980-05', 0, 10, 10).onFinishChange(updateWind);
+gui.add(meta, 'Year', 0, 10, 10).onFinishChange(updateWind);
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
 

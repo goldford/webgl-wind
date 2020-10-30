@@ -8,10 +8,10 @@ canvas.height = canvas.clientHeight;
 const gl = canvas.getContext('webgl', {antialiasing: false});
 
 // go - replacing hardcoded stuff lines 83/84
-const degspan_height = 9
-const degspan_width = 9
-const minlon = -130 //change neg to pos
-const minlat = 45
+const degspan_height = 9;
+const degspan_width = 9;
+const minlon = 130; //change neg to pos
+const minlat = 45;
 
 const wind = window.wind = new WindGL(gl);
 wind.numParticles = 65536;
@@ -89,7 +89,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
 			const test2 = isNaN(parseFloat(y_pos));
 			//console.log(x_pos);
 			//console.log(test1);
-			//console.log(y_pos);
+			console.log(y_pos);
 			//console.log(test2);
 			
 			if (test1 == true || test2 == true) {

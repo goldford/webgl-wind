@@ -41,19 +41,19 @@ const windFiles = {
     //36: '2016112112',
     //42: '2016112118',
     //48: '2016112200'
-	0: '1980-05',
-    10: '2000-05'
+	1980: '1980-05',
+    2000: '2000-05'
 };
 
 const meta = {
-    'Year-Month': 0,
+    'Year-Month': 1980,
 	//'2016-11-20+h': 0,
     'retina resolution': true,
     'github.com/goldford/webgl-wind': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
-gui.add(meta, 'Year-Month', 0, 10, 10).onFinishChange(updateWind);
+gui.add(meta, 'Year-Month', 1980, 2000, 20).onFinishChange(updateWind);
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
 

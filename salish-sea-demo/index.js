@@ -81,8 +81,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
     ctx.beginPath();
 
     for (let i = 0; i < data.features.length; i++) {
-        
-		
+        	
 		const linetype = data.features[i].geometry.type;
 		console.log(linetype);
 		//console.log(line.length);
@@ -151,6 +150,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
 				}
 			}
 		}
+	}
     ctx.stroke();
 });
 

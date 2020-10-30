@@ -92,10 +92,10 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
 			if (test1 == true || test2 == true) {
 				continue;
 			}
-			console.log(line[j][0]);
-			console.log(x_pos);
-			console.log(line[j][1]);
-			console.log(y_pos);
+			//console.log(line[j][0]);
+			//console.log(x_pos);
+			//console.log(line[j][1]);
+			//console.log(y_pos);
             ctx[j ? 'lineTo' : 'moveTo'](
                 //(line[j][0] + 180) * canvas.width / 360,		
                 //(-line[j][1] + 90) * canvas.height / 180);

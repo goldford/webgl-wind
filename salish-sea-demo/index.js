@@ -7,6 +7,10 @@ canvas.height = canvas.clientHeight;
 
 const gl = canvas.getContext('webgl', {antialiasing: false});
 
+// go - replacing hardcoded stuff lines 83/84
+const degspan_height = 5
+const degspan_width = 9
+
 const wind = window.wind = new WindGL(gl);
 wind.numParticles = 65536;
 
@@ -76,8 +80,10 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.json', function (dat
         const line = data.features[i].geometry.coordinates;
         for (let j = 0; j < line.length; j++) {
             ctx[j ? 'lineTo' : 'moveTo'](
-                (line[j][0] + 180) * canvas.width / 360,
-                (-line[j][1] + 90) * canvas.height / 180);
+                //(line[j][0] + 180) * canvas.width / 360,
+                (line[j][0] + (degspan_width/2)) * canvas.width / degspan_width,				
+                //(-line[j][1] + 90) * canvas.height / 180);				
+                (-line[j][1] + (degspan_height/2)) * canvas.height / degspan_height);
         }
     }
     ctx.stroke();

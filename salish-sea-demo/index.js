@@ -41,7 +41,7 @@ const windFiles = {
 };
 
 const meta = {
-	'Title': 'Visualization of Copernicus Wind 10 m (Model ERA5)': function () {
+	'Title': 'Salish Sea Wind Changes Visualizer': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     },
     'Year (May)': 1980,

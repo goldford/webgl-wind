@@ -167,6 +167,94 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
     ctx.stroke();
 });
 
+getJSON('https://goldford.github.io/webgl-wind/data/modelrec.geojson', function (data) {
+    const canvas = document.getElementById('coastline');
+    
+	canvas.width = canvas.clientWidth * pxRatio;
+    canvas.height = canvas.clientHeight * pxRatio;
+	//console.log(canvas.width);
+	//console.log(canvas.height);
+
+    const ctx = canvas.getContext('2d');
+    ctx.lineWidth = pxRatio;
+    ctx.lineJoin = ctx.lineCap = 'round';
+    ctx.strokeStyle = 'red';
+    ctx.beginPath();
+
+    for (let i = 0; i < data.features.length; i++) {
+        	
+		const linetype = data.features[i].geometry.type;
+		//console.log(linetype);
+		
+		// if linetype is MultiLineString then need to have a second nested loop -go
+		if (linetype == "LineString"){
+			const line = data.features[i].geometry.coordinates;
+			for (let j = 0; j < line.length; j++) {
+				
+				const x_pos = (line[j][0] + minlon) * canvas.width / degspan_width;
+				const y_pos = (-line[j][1] + maxlat) * canvas.height / degspan_height;
+				const test1 = isNaN(parseFloat(x_pos));
+				const test2 = isNaN(parseFloat(y_pos));
+				
+				if (test1 == true || test2 == true) {
+					//console.log(line[j][0]);
+					//console.log(line[j][1]);
+					//console.log(x_pos);
+					//console.log(y_pos);
+					continue;
+				}else if(x_pos < 0 || y_pos < 0){
+					//console.log(line[j][0]);
+					//console.log(line[j][1]);
+					//console.log(x_pos);
+					//console.log(y_pos);
+					continue;
+				}
+				
+				ctx[j ? 'lineTo' : 'moveTo'](
+					//(line[j][0] + 180) * canvas.width / 360,		
+					//(-line[j][1] + 90) * canvas.height / 180);
+					x_pos,y_pos
+					);
+			}
+        } else if (linetype == "MultiLineString"){
+			
+			const multilines = data.features[i].geometry.coordinates;
+			
+			for (let j = 0; j < multilines.length; j++) {
+				
+				for (let k = 0; k < multilines[j].length; k++) {
+					
+					const x_pos = (multilines[j][k][0] + minlon) * canvas.width / degspan_width;
+					const y_pos = (-multilines[j][k][1] + maxlat) * canvas.height / degspan_height;
+					const test1 = isNaN(parseFloat(x_pos));
+					const test2 = isNaN(parseFloat(y_pos));
+					
+					if (test1 == true || test2 == true) {
+						//console.log(line[j][0]);
+						//console.log(line[j][1]);
+						//console.log(x_pos);
+						//console.log(y_pos);
+						continue;
+					}else if(x_pos < 0 || y_pos < 0){
+						//console.log(line[j][0]);
+						//console.log(line[j][1]);
+						//console.log(x_pos);
+						//console.log(y_pos);
+						continue;
+					}else{
+						ctx[k ? 'lineTo' : 'moveTo'](
+						//(line[j][0] + 180) * canvas.width / 360,		
+						//(-line[j][1] + 90) * canvas.height / 180);
+						x_pos,y_pos);
+					}
+				}
+			}
+		}
+	}
+    ctx.stroke();
+});
+
+
 function updateWind(name) {
     getJSON('wind/' + windFiles[name] + '.json', function (windData) {
         const windImage = new Image();

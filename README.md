@@ -32,5 +32,7 @@ The ERA5 model is a [retrospective reanalysis](https://climate.copernicus.eu/cli
 3. If desired, swap out or remove the geoJSON and background elevation image (set in the index.html and index.js files in demo folder). You should do this if you're downloading different data than I used. 
 3. Run the 'demo' which uses the PNG file and interpolates it using tools in WEBGL and simulates particles. 
 
-Note: the drawing of geoJSON correctly is fiddley. To properly align with the wind image you'll need to play with params in index.js
+Notes: 
+- drawing of geoJSON correctly is fiddley. To properly align with the wind image you'll need to play with params in index.js
+- the user controls are implemented using dat.gui 
 

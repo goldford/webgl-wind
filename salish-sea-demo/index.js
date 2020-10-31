@@ -25,13 +25,6 @@ function frame() {
 frame();
 
 const gui = new dat.GUI();
-gui.add(meta, 'Visualization of Copernicus Wind 10 m (Model ERA5)');
-
-gui.add(wind, 'numParticles', 1024, 589824);
-gui.add(wind, 'fadeOpacity', 0.96, 0.999).step(0.001).updateDisplay();
-gui.add(wind, 'speedFactor', 0.05, 1.0);
-gui.add(wind, 'dropRate', 0, 0.1);
-gui.add(wind, 'dropRateBump', 0, 0.2);
 
 const windFiles = {
     //0: '2016112000',
@@ -48,6 +41,7 @@ const windFiles = {
 };
 
 const meta = {
+	'Title': 'Visualization of Copernicus Wind 10 m (Model ERA5)',
     'Year (May)': 1980,
 	//'2016-11-20+h': 0,
     'retina resolution': true,
@@ -55,14 +49,22 @@ const meta = {
         window.location = 'https://github.com/goldford/webgl-wind';
     }
 };
+
+gui.add(meta, 'Title');
+gui.add(meta, 'github.com/goldford/webgl-wind');
+
 gui.add(meta, 'Year (May)', 1980, 2000, 20).onFinishChange(updateWind);
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
-
+gui.add(wind, 'numParticles', 1024, 589824);
+gui.add(wind, 'fadeOpacity', 0.96, 0.999).step(0.001).updateDisplay();
+gui.add(wind, 'speedFactor', 0.05, 1.0);
+gui.add(wind, 'dropRate', 0, 0.1);
+gui.add(wind, 'dropRateBump', 0, 0.2);
 if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }
-gui.add(meta, 'github.com/goldford/webgl-wind');
+
 updateWind(1980);
 updateRetina();
 

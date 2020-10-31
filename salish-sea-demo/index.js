@@ -167,7 +167,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/sscoast.geojson', function (
     ctx.stroke();
 });
 
-getJSON('https://goldford.github.io/webgl-wind/data/modelrec.geojson', function (data) {
+/* getJSON('https://goldford.github.io/webgl-wind/data/modelrec.geojson', function (data) {
     const canvas = document.getElementById('coastline');
     
 	canvas.width = canvas.clientWidth * pxRatio;
@@ -253,7 +253,7 @@ getJSON('https://goldford.github.io/webgl-wind/data/modelrec.geojson', function 
 	}
     ctx.stroke();
 });
-
+ */
 
 function updateWind(name) {
     getJSON('wind/' + windFiles[name] + '.json', function (windData) {

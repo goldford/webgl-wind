@@ -62,7 +62,7 @@ gui.add(meta, 'Year (May)', 1980, 2010, 10).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
 gui.add(wind, 'numParticles', 1024, 589824);
 gui.add(wind, 'fadeOpacity', 0.96, 0.999).step(0.001).updateDisplay();
-gui.add(wind, 'speedFactor', 0.05, 1.0);
+gui.add(wind, 'speedFactor', 0.05, 2);
 gui.add(wind, 'dropRate', 0, 0.1);
 gui.add(wind, 'dropRateBump', 0, 0.2);
 if (pxRatio !== 1) {

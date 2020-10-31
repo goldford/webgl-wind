@@ -41,7 +41,9 @@ const windFiles = {
 };
 
 const meta = {
-	'Title': 'Visualization of Copernicus Wind 10 m (Model ERA5)',
+	'Title': 'Visualization of Copernicus Wind 10 m (Model ERA5)': function () {
+        window.location = 'https://github.com/goldford/webgl-wind';
+    },
     'Year (May)': 1980,
 	//'2016-11-20+h': 0,
     'retina resolution': true,

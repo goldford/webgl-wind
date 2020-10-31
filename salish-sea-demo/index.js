@@ -41,7 +41,7 @@ const windFiles = {
 };
 
 const meta = {
-	'Title': 'Salish Sea Wind Changes Visualizer': function () {
+	'Salish Sea Wind Changes Visualizer': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     },
     'Year (May)': 1980,
@@ -52,7 +52,7 @@ const meta = {
     }
 };
 
-gui.add(meta, 'Title');
+gui.add(meta, 'Salish Sea Wind Changes Visualizer');
 gui.add(meta, 'github.com/goldford/webgl-wind');
 
 gui.add(meta, 'Year (May)', 1980, 2000, 20).onFinishChange(updateWind);

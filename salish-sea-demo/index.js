@@ -56,7 +56,6 @@ const meta = {
 
 gui.add(meta, 'Salish Sea Wind Changes Visualizer');
 gui.add(meta, 'github.com/goldford/webgl-wind');
-
 gui.add(meta, 'Year (May)', 1980, 2010, 10).onFinishChange(updateWind);
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);

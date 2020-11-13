@@ -63,15 +63,27 @@ const windFiles = {
     198309: '1983-09',
     198310: '1983-10',
     198311: '1983-11',
-    198312: '1983-12'
+    198312: '1983-12',
+	199801: '1998-01',
+    199802: '1998-02',
+    199803: '1998-03',
+    199804: '1998-04',
+    199805: '1998-05',
+    199806: '1998-06',
+    199807: '1998-07',
+    199808: '1998-08',
+    199809: '1998-09',
+    199810: '1998-10',
+    199811: '1998-11',
+    199812: '1998-12'
 };
 
 const meta = {
 	'Salish Sea Wind Changes Visualizer': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     },
-    'YYYYMM': 198001,
-	'YYYY-MM': '1980-01',
+    'YYYYMM': 199801,
+	'YYYY-MM': '1998-01',
 	//'2016-11-20+h': 0,
     'retina resolution': true,
     'github.com/goldford/webgl-wind': function () {
@@ -81,7 +93,7 @@ const meta = {
 
 gui.add(meta, 'Salish Sea Wind Changes Visualizer');
 gui.add(meta, 'github.com/goldford/webgl-wind');
-gui.add(meta, 'YYYYMM', 198001, 198012, 1).onFinishChange(updateWind);
+gui.add(meta, 'YYYYMM', 199801, 199812, 1).onFinishChange(updateWind);
 //gui.add(meta, 'YYYY-MM', [ '1983-01', 'Option 2', 'Option 3' ] );
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
@@ -94,7 +106,7 @@ if (pxRatio !== 1) {
     gui.add(meta, 'retina resolution').onFinishChange(updateRetina);
 }
 
-updateWind(198301);
+updateWind(199801);
 updateRetina();
 
 function updateRetina() {

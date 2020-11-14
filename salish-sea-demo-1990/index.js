@@ -64,6 +64,18 @@ const windFiles = {
     198310: '1983-10',
     198311: '1983-11',
     198312: '1983-12',
+	199001: '1990-01',
+    199002: '1990-02',
+    199003: '1990-03',
+    199004: '1990-04',
+    199005: '1990-05',
+    199006: '1990-06',
+    199007: '1990-07',
+    199008: '1990-08',
+    199009: '1990-09',
+    199010: '1990-10',
+    199011: '1990-11',
+    199012: '1990-12',
 	199801: '1998-01',
     199802: '1998-02',
     199803: '1998-03',
@@ -82,8 +94,8 @@ const meta = {
 	'Salish Sea Wind Changes Visualizer': function () {
         window.location = 'https://github.com/goldford/webgl-wind';
     },
-    'YYYYMM': 198001,
-	'YYYY-MM': '1980-01',
+    'YYYYMM': 199001,
+	'YYYY-MM': '1990-01',
 	//'2016-11-20+h': 0,
     'retina resolution': true,
     'github.com/goldford/webgl-wind': function () {
@@ -93,7 +105,7 @@ const meta = {
 
 gui.add(meta, 'Salish Sea Wind Changes Visualizer');
 gui.add(meta, 'github.com/goldford/webgl-wind');
-gui.add(meta, 'YYYYMM', 198001, 198012, 1).onFinishChange(updateWind);
+gui.add(meta, 'YYYYMM', 199001, 199012, 1).onFinishChange(updateWind);
 //gui.add(meta, 'YYYY-MM', [ '1983-01', 'Option 2', 'Option 3' ] );
 //gui.add(meta, '2016-11-20+h', 0, 48, 6).onFinishChange(updateWind);
 //gui.add(meta, '1980-05', 0, 48, 6).onFinishChange(updateWind);
